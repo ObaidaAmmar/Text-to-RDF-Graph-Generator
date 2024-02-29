@@ -380,9 +380,9 @@ public class Controller {
     private static LinkedHashMap<String, ArrayList<Pair<String, String>>> saveSVO(LinkedHashMap<String, ArrayList<Pair<String, String>>> relations, String subject, String verb, String object)
     {
         //we remove all brackets and whitespaces from the s-v-o
-        subject = subject.replaceAll("[\\[\\]\\s]", "");
-        verb = verb.replaceAll("[\\[\\]\\s]", "");
-        object = object.replaceAll("[\\[\\]\\s]", "");
+        subject = subject.replaceAll("[\\[\\]\\s]", "").toLowerCase();
+        verb = verb.replaceAll("[\\[\\]\\s]", "").toLowerCase();
+        object = object.replaceAll("[\\[\\]\\s]", "").toLowerCase();
         //this is to check if we have encountered a coordinating conjunction that requires special treatment
         if(subject.contains("+") || verb.contains("+") || object.contains("+"))
         {   //if we have 2 subjects 2 verbs and 2 objects in the sentence
