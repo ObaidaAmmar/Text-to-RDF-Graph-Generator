@@ -165,8 +165,8 @@ public class Controller {
 
     private void displayGraphImage(String imageUrl) {
         ImageIcon imageIcon = null;
-        int maxWidth = 1000;
-        int maxHeight = 700;
+        int maxWidth = 1600;
+        int maxHeight = 1300;
         //uncomment the lines below to rescale the image
         try{
             if(!imageUrl.isEmpty())
@@ -494,7 +494,7 @@ public class Controller {
 
                     if(relations.containsKey(sub))
                     {
-                        relations.get(subject).add(new Pair<>(verb,object));
+                        relations.get(sub).add(new Pair<>(verb,object));
                     }
                     else
                     {
