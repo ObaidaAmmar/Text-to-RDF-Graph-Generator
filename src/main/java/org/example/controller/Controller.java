@@ -291,8 +291,8 @@ public class Controller {
     }
     //Method to detect sentences in the paragraph
     private static String[] performSentenceDetection(String paragraph)
-    {
-        try(InputStream modelIn = new FileInputStream("src/main/java/org/example/asset/en-sent.bin"))
+    {   InputStream modelIn = Controller.class.getClassLoader().getResourceAsStream("org/example/asset/en-sent.bin");
+        try
         {
             SentenceModel model = new SentenceModel(modelIn);
             SentenceDetectorME sentenceDetector = new SentenceDetectorME(model);
