@@ -317,7 +317,7 @@ public class Controller {
             sb.append(" <rdf:Description rdf:about=\"http://example.org/").append(key).append("\">\n");
             for(Pair<String,String> pair : pairs)
             {
-                sb.append("   <mydomain:").append(pair.getKey()).append(" rdf:resource=\"").append(pair.getValue()).append("\"/>\n");
+                sb.append("   <mydomain:").append(pair.getKey()).append(" rdf:resource=\"http://example.org/").append(pair.getValue()).append("\"/>\n");
             }
             sb.append(" </rdf:Description>\n");
         }
